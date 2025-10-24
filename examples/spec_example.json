@@ -1,0 +1,15 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "user": {
+        "firstName": "person.first",
+        "lastName": "person.last",
+        "location": {
+          "city": "person.address.city",
+          "state": "person.address.state"
+        }
+      }
+    }
+  }
+]
