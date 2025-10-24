@@ -1,0 +1,7 @@
+{
+  "user": {
+    "firstName": "Alice",
+    "lastName": "Smith",
+    "location": { "city": "Los Angeles", "state": "CA" }
+  }
+}
