@@ -10,14 +10,14 @@ try:
 except ImportError:
     JOLT_AVAILABLE = False
 
-# --- Page setup ---
+#page
 st.set_page_config(
     page_title="JOLT Transformer Demo",
     layout="wide",
     initial_sidebar_state="collapsed"  # starts closed
 )
 
-# --- Styling ---
+#style
 st.markdown("""
 <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 <style>
@@ -51,7 +51,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# --- Sidebar ---
+# sidebar
 st.sidebar.header("About this Demo")
 st.sidebar.info("""
 This Streamlit prototype demonstrates a JOLT-style JSON-to-JSON transformation.
@@ -59,7 +59,7 @@ It shows a source JSON on the left, a transformed result on the right, and the
 transformation process in between for visual clarity.
 """)
 
-# --- Load example data automatically ---
+# Load example data automatically
 def load_example_data():
     src = {
         "user": {
@@ -93,7 +93,7 @@ src_text = st.session_state.src_text
 spec_text = st.session_state.spec_text
 result_text = "{}"
 
-# --- Layout: three columns ---
+# Layout: three columns
 left, center, right = st.columns([5, 2, 5])
 
 with left:
@@ -147,7 +147,8 @@ with right:
     else:
         st.info("Awaiting transformation...")
 
-# --- Divider and details ---
+# Divider and details 
 st.markdown("---")
 with st.expander("View JOLT Spec Used"):
     st.json(json.loads(spec_text))
+
